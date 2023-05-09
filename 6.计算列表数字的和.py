@@ -7,14 +7,19 @@ while True:
         break  # 如果用户输入 q，跳出循环
     else:
         try:
-            number = float(user_input)  # 尝试将用户输入的字符串转换成浮点数
+            number = int(user_input)  # 尝试将用户输入的字符串转换成浮点数
             numbers.append(number)  # 将转换后的数字添加到列表中
         except ValueError:
             print("请输入有效的数字！")
 
 print("输入的数字列表为：", numbers)
 
+sum1 = 0
 
+for i in numbers:
+    sum1 += i
+
+print(f'输入数字构成列表的和是: {sum1}')
 
 
 
